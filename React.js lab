@@ -4,6 +4,7 @@ import './App.css';
 import 'bulma/css/bulma.css';
 import foods from './foods.json';
 import FoodBox from './components/FoodBox';
+// here we are importing all of our components, Jsons, extensions, CSS, etc. this is how we connect our react page to our other documents. we import (set variable name) from (where ever we are grabbing our info from)
 // we are going to be using the foods. this means we have to create a variable/constant in the code that we can use to manipulate the array contained in this JSON
 // to do this we use a useState. this is because we will be manipulating this array by adding foods to it, filtering it, and searching it. we create the constant and in brackets
 // we contain the two fundamental states of use state. the beginning and next. in the foods example we have copyfoods, which is also the useState because in the syntax, this is where we begin,
@@ -11,7 +12,7 @@ import FoodBox from './components/FoodBox';
 function App() {
   //here we have our use states. these are generally grouped together at the top of the page *gang*. I will first describe the nature of the syntax and then relate it to the rest of the page.
   //below you will see that our before and after values are shared in the same constant. this is indicative of the relationship between the initial value, and its setValue, or rather, its before
-  //and next/after state. the intial value can start of with just a boolean, array, variable, etc, basically this is treated just like any other constant(maybe? i dont know what im talking
+  //and next/after state. the initial value can start of with just a boolean, array, variable, etc, basically this is treated just like any other constant(maybe? i dont know what im talking
   //about so if youre reading this because i shared it with you, please note that, as you are aware, i type this out on my third day of ever knowing what react is. with the caveat, we push on
   //into the fray that is React.) next we have our setState. now in this project specifically (i speak as a man not God) it can be seen we create methods and functions to associate with the set
   //state. this is probably because the setState is where the magic happens. I probably should have mentioned before, but the point of useState is to manipulate and change content on the page.
@@ -24,7 +25,8 @@ function App() {
   //first title with setplaced in front of it. you dont have to do this, but it gets pretty fucking confusing if you dont.)] = useState(these parenthesis will hold your beginning value)
   const [showForm, setShowForm] = useState(false);
   // im just going to say it, our choice of how we chose to name our useStates made this way more confusing than it needed to be to break down. so note to self, we gotta make sure to really
-  //come up with titles that differentiate what we are trying to accomplish. having 4 titles all sharing the word food made this almost impossible to fully break down what was going on
+  //come up with titles that differentiate what we are trying to accomplish. having 4 titles all sharing the word food made this almost impossible to fully break down what was going on without having
+  // to quadruple check what the fuck I was even working with/ manipulating. 
   const [theFood, setTheFood] = useState('');
   const [copyFood, setFood] = useState(foods);
   //okay useState was longer than I anticipated, but these methods and functions are complex, and the more i write, the more i realize how complex it is, the more i realize how absolutley amazing and
